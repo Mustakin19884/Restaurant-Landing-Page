@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FoodieHub Restaurant</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  <style>
+    body{
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .hero-bg{
+      background:
+      linear-gradient(to right, rgba(0,0,0,.8), rgba(0,0,0,.5)),
+      url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1974&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .glass{
+      backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.05);
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white">
+
+  <!-- Navbar -->
+  <header class="fixed w-full top-0 z-50 bg-black/70 backdrop-blur-md border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+      <h1 class="text-3xl font-bold text-orange-500">
+        FoodieHub
+      </h1>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex gap-8 items-center">
+        <a href="#home" class="hover:text-orange-500 transition">Home</a>
+        <a href="#menu" class="hover:text-orange-500 transition">Menu</a>
+        <a href="#about" class="hover:text-orange-500 transition">About</a>
+        <a href="#testimonials" class="hover:text-orange-500 transition">Reviews</a>
+        <a href="#contact" class="hover:text-orange-500 transition">Contact</a>
+        <a href="#reservation">
+  <button class="bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-full transition">
+    Book Table
+  </button>
+</a>
+  
+
+        <button class="bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-full transition">
+          Book Table
+        </button>
+      </nav>
+
+      <!-- Mobile Button -->
+      <button id="menu-btn" class="md:hidden text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black border-t border-white/10">
+      <div class="flex flex-col p-6 gap-5">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">About</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#contact">Contact</a>
+
+        <button class="bg-orange-500 py-3 rounded-full">
+          Book Table
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-bg min-h-screen flex items-center">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
+
+      <div>
+        <p class="text-orange-500 font-semibold mb-4">
+          BEST RESTAURANT IN TOWN
+        </p>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6">
+          Delicious Food For Your Soul
+        </h1>
+
+        <p class="text-gray-300 text-lg mb-8 max-w-xl">
+          Experience premium dining with fresh ingredients,
+          world-class chefs, and unforgettable flavors.
+        </p>
+
+        <div class="flex flex-wrap gap-4">
+          <button class="bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-full font-semibold transition">
+            Order Now
+          </button>
+
+          <button class="border border-white/30 hover:bg-white hover:text-black px-8 py-4 rounded-full transition">
+            View Menu
+          </button>
+        </div>
+      </div>
+
+      <!-- Hero Card -->
+      <div class="hidden lg:flex justify-center">
+        <div class="glass p-8 rounded-3xl border border-white/10 shadow-2xl">
+
+          <img
+            src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=1981&auto=format&fit=crop"
+            class="w-[450px] h-[450px] object-cover rounded-3xl"
+          />
+
+          <div class="mt-6 flex justify-between items-center">
+            <div>
+              <h3 class="text-2xl font-bold">Italian Pizza</h3>
+              <p class="text-gray-400">Cheesy & Delicious</p>
+            </div>
+
+            <span class="text-orange-500 text-2xl font-bold">
+              $24
+            </span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="py-20 border-y border-white/10 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+
+      <div>
+        <h2 class="text-4xl font-bold text-orange-500">15+</h2>
+        <p class="text-gray-400 mt-2">Years Experience</p>
+      </div>
+
+      <div>
+        <h2 class="text-4xl font-bold text-orange-500">50k+</h2>
+        <p class="text-gray-400 mt-2">Happy Customers</p>
+      </div>
+
+      <div>
+        <h2 class="text-4xl font-bold text-orange-500">120+</h2>
+        <p class="text-gray-400 mt-2">Food Items</p>
+      </div>
+
+      <div>
+        <h2 class="text-4xl font-bold text-orange-500">4.9</h2>
+        <p class="text-gray-400 mt-2">Customer Rating</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Popular Menu -->
+  <section id="menu" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <p class="text-orange-500 font-semibold mb-3">
+          POPULAR DISHES
+        </p>
+
+        <h2 class="text-5xl font-bold">
+          Our Special Menu
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Card -->
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden hover:-translate-y-2 transition duration-300 border border-white/10">
+
+          <img
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop"
+            class="h-64 w-full object-cover"
+          />
+
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-semibold">Pepperoni Pizza</h3>
+              <span class="text-orange-500 font-bold text-xl">$18</span>
+            </div>
+
+            <p class="text-gray-400 mb-6">
+              Crispy crust with premium cheese and fresh toppings.
+            </p>
+
+            <button class="w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl transition">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden hover:-translate-y-2 transition duration-300 border border-white/10">
+
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=1998&auto=format&fit=crop"
+            class="h-64 w-full object-cover"
+          />
+
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-semibold">Classic Burger</h3>
+              <span class="text-orange-500 font-bold text-xl">$15</span>
+            </div>
+
+            <p class="text-gray-400 mb-6">
+              Juicy beef burger with crispy fries and cheese.
+            </p>
+
+            <button class="w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl transition">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="bg-zinc-900 rounded-3xl overflow-hidden hover:-translate-y-2 transition duration-300 border border-white/10">
+
+          <img
+            src="https://plus.unsplash.com/premium_photo-1664478288635-b9703a502393?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/"
+            class="h-64 w-full object-cover"
+          />
+
+          <div class="p-6">
+            <div class="flex justify-between items-center mb-4">
+              <h3 class="text-2xl font-semibold">Pasta Italiano</h3>
+              <span class="text-orange-500 font-bold text-xl">$20</span>
+            </div>
+
+            <p class="text-gray-400 mb-6">
+              Creamy italian pasta with herbs and parmesan cheese.
+            </p>
+
+            <button class="w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl transition">
+              Add To Cart
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-24 bg-zinc-950">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+
+      <div>
+        <img
+          src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=2070&auto=format&fit=crop"
+          class="rounded-3xl"
+        />
+      </div>
+
+      <div>
+        <p class="text-orange-500 font-semibold mb-4">
+          ABOUT US
+        </p>
+
+        <h2 class="text-5xl font-bold leading-tight mb-6">
+          We Create The Best Dining Experience
+        </h2>
+
+        <p class="text-gray-400 leading-relaxed mb-8">
+          Our restaurant combines modern taste with premium ingredients.
+          Every meal is prepared by expert chefs to give you an unforgettable experience.
+        </p>
+
+        <div class="space-y-5">
+
+          <div class="flex gap-4">
+            <i class="fa-solid fa-check text-orange-500 text-xl mt-1"></i>
+            <p>Fresh & Organic Ingredients</p>
+          </div>
+
+          <div class="flex gap-4">
+            <i class="fa-solid fa-check text-orange-500 text-xl mt-1"></i>
+            <p>Professional Master Chefs</p>
+          </div>
+
+          <div class="flex gap-4">
+            <i class="fa-solid fa-check text-orange-500 text-xl mt-1"></i>
+            <p>Fast & Quality Service</p>
+          </div>
+
+        </div>
+
+        <button class="mt-10 bg-orange-500 hover:bg-orange-600 px-8 py-4 rounded-full transition">
+          Discover More
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="text-center mb-16">
+        <p class="text-orange-500 font-semibold mb-3">
+          TESTIMONIALS
+        </p>
+
+        <h2 class="text-5xl font-bold">
+          What Customers Say
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-white/10">
+          <div class="flex text-orange-500 mb-5">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-400 mb-6">
+            “Amazing food quality and beautiful atmosphere.
+            One of the best restaurants I've visited.”
+          </p>
+
+          <div class="flex items-center gap-4">
+            <img
+              src="https://randomuser.me/api/portraits/women/68.jpg"
+              class="w-14 h-14 rounded-full"
+            />
+
+            <div>
+              <h4 class="font-semibold">Sarah Johnson</h4>
+              <p class="text-gray-500 text-sm">Food Blogger</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-white/10">
+          <div class="flex text-orange-500 mb-5">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-400 mb-6">
+            “The burger and pizza were absolutely incredible.
+            Highly recommended!”
+          </p>
+
+          <div class="flex items-center gap-4">
+            <img
+              src="https://randomuser.me/api/portraits/men/32.jpg"
+              class="w-14 h-14 rounded-full"
+            />
+
+            <div>
+              <h4 class="font-semibold">Michael Smith</h4>
+              <p class="text-gray-500 text-sm">Customer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-zinc-900 p-8 rounded-3xl border border-white/10">
+          <div class="flex text-orange-500 mb-5">
+            ★★★★★
+          </div>
+
+          <p class="text-gray-400 mb-6">
+            “Luxury environment with professional service and tasty food.”
+          </p>
+
+          <div class="flex items-center gap-4">
+            <img
+              src="https://randomuser.me/api/portraits/women/44.jpg"
+              class="w-14 h-14 rounded-full"
+            />
+
+            <div>
+              <h4 class="font-semibold">Emily Davis</h4>
+              <p class="text-gray-500 text-sm">Customer</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 bg-orange-500">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+
+      <h2 class="text-5xl font-bold mb-6">
+        Reserve Your Table Today
+      </h2>
+
+      <p class="text-lg mb-8">
+        Enjoy delicious meals and unforgettable dining experiences.
+      </p>
+
+      <button class="bg-black hover:bg-zinc-900 px-10 py-4 rounded-full text-white font-semibold transition">
+        Book Reservation
+      </button>
+
+    </div>
+  </section>
+
+
+<!-- Reservation Section -->
+<section id="reservation" class="py-24 bg-zinc-950">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left Content -->
+      <div>
+
+        <p class="text-orange-500 font-semibold mb-4">
+          BOOK A TABLE
+        </p>
+
+        <h2 class="text-5xl font-bold leading-tight mb-6">
+          Make Reservation
+        </h2>
+
+        <p class="text-gray-400 mb-10 leading-relaxed">
+          Reserve your table easily and enjoy a premium dining experience
+          with your family and friends.
+        </p>
+
+        <!-- Info Cards -->
+        <div class="space-y-6">
+
+          <div class="flex items-start gap-5">
+            <div class="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center text-xl">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+              <h4 class="text-xl font-semibold mb-1">
+                Location
+              </h4>
+
+              <p class="text-gray-400">
+                25 Restaurant Street, New York
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5">
+            <div class="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center text-xl">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+
+            <div>
+              <h4 class="text-xl font-semibold mb-1">
+                Phone
+              </h4>
+
+              <p class="text-gray-400">
+                +1 234 567 890
+              </p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5">
+            <div class="bg-orange-500 w-14 h-14 rounded-full flex items-center justify-center text-xl">
+              <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div>
+              <h4 class="text-xl font-semibold mb-1">
+                Opening Time
+              </h4>
+
+              <p class="text-gray-400">
+                Mon - Sun : 9AM - 11PM
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Reservation Form -->
+      <div class="bg-black border border-white/10 rounded-3xl p-8 shadow-2xl">
+
+        <form class="space-y-6" id="reservationForm">
+
+          <div>
+            <label class="block mb-2 text-gray-300">
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              placeholder="Enter your name"
+              class="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-orange-500"
+            />
+          </div>
+
+          <div>
+            <label class="block mb-2 text-gray-300">
+              Email Address
+            </label>
+
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-orange-500"
+            />
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6">
+
+            <div>
+              <label class="block mb-2 text-gray-300">
+                Date
+              </label>
+
+              <input
+                type="date"
+                class="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-orange-500"
+              />
+            </div>
+
+            <div>
+              <label class="block mb-2 text-gray-300">
+                Time
+              </label>
+
+              <input
+                type="time"
+                class="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-orange-500"
+              />
+            </div>
+
+          </div>
+
+          <div>
+            <label class="block mb-2 text-gray-300">
+              Number of Guests
+            </label>
+
+            <select
+              class="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-orange-500"
+            >
+              <option>1 Person</option>
+              <option>2 People</option>
+              <option>3 People</option>
+              <option>4 People</option>
+              <option>5+ People</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block mb-2 text-gray-300">
+              Special Request
+            </label>
+
+            <textarea
+              rows="4"
+              placeholder="Write something..."
+              class="w-full bg-zinc-900 border border-white/10 rounded-xl px-5 py-4 outline-none focus:border-orange-500 resize-none"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full bg-orange-500 hover:bg-orange-600 py-4 rounded-xl text-lg font-semibold transition"
+          >
+            Reserve Table
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-black py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+      <div>
+        <h2 class="text-3xl font-bold text-orange-500 mb-5">
+          FoodieHub
+        </h2>
+
+        <p class="text-gray-400">
+          Premium restaurant experience with delicious food and luxury ambiance.
+        </p>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-5">Quick Links</h3>
+
+        <div class="space-y-3 text-gray-400">
+          <p>Home</p>
+          <p>Menu</p>
+          <p>About</p>
+          <p>Contact</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-5">Opening Hours</h3>
+
+        <div class="space-y-3 text-gray-400">
+          <p>Mon - Fri : 9AM - 11PM</p>
+          <p>Saturday : 10AM - 12PM</p>
+          <p>Sunday : Closed</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="text-xl font-semibold mb-5">Follow Us</h3>
+
+        <div class="flex gap-4 text-2xl">
+          <a href="#" class="hover:text-orange-500 transition">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+
+          <a href="#" class="hover:text-orange-500 transition">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="#" class="hover:text-orange-500 transition">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+
+          <a href="#" class="hover:text-orange-500 transition">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-white/10 mt-16 pt-8 text-center text-gray-500">
+      © 2026 FoodieHub. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+
+  <script>
+  
+
+  const form = document.getElementById("reservationForm");
+
+  const modal = document.getElementById("successModal");
+
+  const modalContent = document.getElementById("modalContent");
+
+  const closeModal = document.getElementById("closeModal");
+
+
+
+  // Submit Form
+  form.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    // Show modal
+    modal.classList.remove("hidden");
+
+    modal.classList.add("flex");
+
+
+
+    // Animate popup
+    setTimeout(() => {
+
+      modalContent.classList.remove("scale-75", "opacity-0");
+
+      modalContent.classList.add("scale-100", "opacity-100");
+
+    }, 50);
+
+
+
+    // Reset form
+    form.reset();
+
+  });
+
+
+
+  // Close Modal Button
+  closeModal.addEventListener("click", closePopup);
+
+
+
+  // Click Outside Modal
+  modal.addEventListener("click", function(e){
+
+    if(e.target === modal){
+
+      closePopup();
+
+    }
+
+  });
+
+
+
+  function closePopup(){
+
+    modalContent.classList.remove("scale-100", "opacity-100");
+
+    modalContent.classList.add("scale-75", "opacity-0");
+
+
+
+    setTimeout(() => {
+
+      modal.classList.add("hidden");
+
+      modal.classList.remove("flex");
+
+    }, 300);
+
+  }
+
+</script>
+
+
+
+
+
+<!-- Success Modal -->
+<div
+  id="successModal"
+  class="fixed inset-0 bg-black/70 backdrop-blur-sm hidden items-center justify-center z-[999]"
+>
+
+  <div
+    class="bg-zinc-900 border border-white/10 rounded-3xl p-10 w-[90%] max-w-md text-center scale-75 opacity-0 transition-all duration-300"
+    id="modalContent"
+  >
+
+    <!-- Success Icon -->
+    <div class="w-24 h-24 mx-auto bg-green-500/20 rounded-full flex items-center justify-center mb-6">
+      <i class="fa-solid fa-check text-5xl text-green-500"></i>
+    </div>
+
+    <h2 class="text-3xl font-bold mb-4">
+      Reservation Successful!
+    </h2>
+
+    <p class="text-gray-400 mb-8 leading-relaxed">
+      Thank you for booking with us.
+      We will contact you shortly to confirm your reservation.
+    </p>
+
+    <button
+      id="closeModal"
+      class="bg-orange-500 hover:bg-orange-600 px-8 py-3 rounded-full font-semibold transition"
+    >
+      Continue
+    </button>
+
+  </div>
+</div>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const form = document.getElementById("reservationForm");
+  const modal = document.getElementById("successModal");
+  const modalContent = document.getElementById("modalContent");
+  const closeModal = document.getElementById("closeModal");
+
+  // Submit Form
+  form.addEventListener("submit", function(e) {
+
+    e.preventDefault();
+
+    // Show modal
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+
+    // Animation
+    setTimeout(() => {
+      modalContent.classList.remove("scale-75", "opacity-0");
+      modalContent.classList.add("scale-100", "opacity-100");
+    }, 50);
+
+    // Reset form
+    form.reset();
+
+  });
+
+  // Close button
+  closeModal.addEventListener("click", closePopup);
+
+  // Outside click close
+  modal.addEventListener("click", (e) => {
+
+    if (e.target === modal) {
+      closePopup();
+    }
+
+  });
+
+  function closePopup() {
+
+    modalContent.classList.remove("scale-100", "opacity-100");
+    modalContent.classList.add("scale-75", "opacity-0");
+
+    setTimeout(() => {
+
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+
+    }, 300);
+
+  }
+
+});
+
+</script>
+
+</body>
+</html>
